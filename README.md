@@ -4,6 +4,16 @@ Windows bootstrap for a colorful **wmux** desk setup.
 
 Installs wmux, sets **Catppuccin** + **CaskaydiaCove NF**, and configures a Catppuccin Mocha PowerShell prompt (Oh My Posh, Terminal-Icons, PSReadLine colors).
 
+## Example
+
+![wmux with Catppuccin and CaskaydiaCove NF](docs/wmux-example.png)
+
+Reproduce the colorful demo:
+
+```powershell
+.\scripts\Show-ColorDemo.ps1
+```
+
 ## Requirements
 
 - Windows 10/11
@@ -42,12 +52,13 @@ Auto-answer "quit wmux?" with yes (for non-interactive use):
 | Step | Script |
 |------|--------|
 | Install wmux | `scripts/Install-Wmux.ps1` |
-| Install CaskaydiaCove NF | `scripts/Install-Fonts.ps1` |
-| Install Oh My Posh + theme + Terminal-Icons | `scripts/Install-OhMyPosh.ps1` |
-| Install PowerShell profile | `scripts/Install-Profile.ps1` |
-| Apply Catppuccin + font in wmux | `scripts/Apply-WmuxTheme.ps1` |
+| Install Oh My Posh + theme | `scripts/Install-OhMyPosh.ps1` |
+| Install Terminal-Icons | `scripts/Install-TerminalIcons.ps1` |
+| Install PowerShell profile | `scripts/Set-PowerShellProfile.ps1` |
+| Install CaskaydiaCove NF | `scripts/Install-NerdFont.ps1` |
+| Apply Catppuccin + font in wmux | `scripts/Set-WmuxTheme.ps1` |
 
-`Apply-WmuxTheme.ps1` asks before it quits wmux, patches `%APPDATA%\wmux\session.json`, then reopens wmux.
+`Set-WmuxTheme.ps1` asks before it quits wmux, patches `%APPDATA%\wmux\session.json`, then reopens wmux.
 
 ## Why boxes appear in the prompt
 
@@ -60,15 +71,19 @@ beautiful-wmux/
   setup.ps1
   README.md
   CONTEXT.md
+  docs/
+    wmux-example.png
   config/
     catppuccin-mocha.omp.json
     Microsoft.PowerShell_profile.ps1
   scripts/
     Install-Wmux.ps1
-    Install-Fonts.ps1
     Install-OhMyPosh.ps1
-    Install-Profile.ps1
-    Apply-WmuxTheme.ps1
+    Install-TerminalIcons.ps1
+    Set-PowerShellProfile.ps1
+    Install-NerdFont.ps1
+    Set-WmuxTheme.ps1
+    Show-ColorDemo.ps1
 ```
 
 ## License
