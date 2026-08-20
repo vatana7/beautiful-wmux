@@ -8,12 +8,6 @@ Installs wmux, sets **Catppuccin** + **CaskaydiaCove NF**, and configures a Catp
 
 ![wmux with Catppuccin and CaskaydiaCove NF](docs/wmux-example.png)
 
-Reproduce the colorful demo:
-
-```powershell
-.\scripts\Show-ColorDemo.ps1
-```
-
 ## Requirements
 
 - Windows 10/11
